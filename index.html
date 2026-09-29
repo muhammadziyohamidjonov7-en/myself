@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="en">
+<html lang="uz">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0f172a">
-  <meta name="description" content="A private, client-side personal finance tracker for income, spending, and recurring bills.">
-  <title>Sarmoya | Personal Finance</title>
+  <meta name="description" content="Daromad, xarajat va oylik budjetingizni shaxsiy qurilmangizda kuzating.">
+  <title>Sarmoya | Moliya nazorati</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -20,124 +20,124 @@
         <span class="brand-mark" aria-hidden="true">s</span>
         <span class="brand-name">sarmoya<span class="brand-dot">.</span></span>
       </a>
-      <div class="sidebar-label">WORKSPACE</div>
+      <div class="sidebar-label">ISH MAYDONI</div>
       <nav class="main-nav">
-        <a class="nav-link is-active" href="#overview"><span class="nav-icon" aria-hidden="true">◫</span>Overview</a>
-        <a class="nav-link" href="#transactions"><span class="nav-icon" aria-hidden="true">⇄</span>Transactions</a>
-        <a class="nav-link" href="#recurring"><span class="nav-icon" aria-hidden="true">↻</span>Recurring bills</a>
-        <a class="nav-link" href="#analytics"><span class="nav-icon" aria-hidden="true">▥</span>Analytics</a>
+        <a class="nav-link is-active" href="#overview"><span class="nav-icon" aria-hidden="true">◫</span>Umumiy ko‘rinish</a>
+        <a class="nav-link" href="#transactions"><span class="nav-icon" aria-hidden="true">⇄</span>Operatsiyalar</a>
+        <a class="nav-link" href="#recurring"><span class="nav-icon" aria-hidden="true">↻</span>Oylik to‘lovlar</a>
+        <a class="nav-link" href="#analytics"><span class="nav-icon" aria-hidden="true">▥</span>Tahlil</a>
       </nav>
       <div class="sidebar-bottom">
-        <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">◈</span><div><strong>Your money, your device</strong><span>Private by design</span></div></div>
-        <button class="sidebar-action" id="theme-toggle" type="button" aria-label="Switch to light theme"><span aria-hidden="true">☼</span><span id="theme-label">Light appearance</span></button>
+        <div class="privacy-note"><span class="privacy-icon" aria-hidden="true">◈</span><div><strong>Mablag‘laringiz o‘z qurilmangizda</strong><span>Ma’lumotlar maxfiy saqlanadi</span></div></div>
+        <button class="sidebar-action" id="theme-toggle" type="button" aria-label="Yorug‘ mavzuga o‘tish"><span aria-hidden="true">☼</span><span id="theme-label">Yorug‘ ko‘rinish</span></button>
       </div>
     </aside>
 
     <main class="main-content" id="overview">
       <header class="topbar">
-        <div class="page-context"><span class="eyebrow">PERSONAL FINANCE</span><h1>Overview</h1></div>
+        <div class="page-context"><span class="eyebrow">SHAXSIY MOLIYA</span><h1>Umumiy ko‘rinish</h1></div>
         <div class="topbar-actions">
-          <button class="button button-quiet" id="export-button" type="button"><span aria-hidden="true">↧</span><span>Export CSV</span></button>
-          <button class="button button-primary" id="add-transaction-button" type="button"><span aria-hidden="true">＋</span><span>Add transaction</span></button>
-          <button class="icon-button mobile-theme-toggle" id="mobile-theme-toggle" type="button" aria-label="Switch theme"><span aria-hidden="true">☼</span></button>
+          <button class="button button-quiet" id="export-button" type="button"><span aria-hidden="true">↧</span><span>CSV yuklab olish</span></button>
+          <button class="button button-primary" id="add-transaction-button" type="button"><span aria-hidden="true">＋</span><span>Operatsiya qo‘shish</span></button>
+          <button class="icon-button mobile-theme-toggle" id="mobile-theme-toggle" type="button" aria-label="Mavzuni almashtirish"><span aria-hidden="true">☼</span></button>
         </div>
       </header>
 
       <section class="welcome-row" aria-label="Current period">
-        <div><p class="welcome-title">Your finances at a glance<span class="accent-period">.</span></p><p class="welcome-subtitle" id="current-period"></p></div>
-        <button class="text-button" id="edit-budget-button" type="button"><span aria-hidden="true">⚙</span> Set monthly budget</button>
+        <div><p class="welcome-title">Moliyangiz bir nigohda<span class="accent-period">.</span></p><p class="welcome-subtitle" id="current-period"></p></div>
+        <button class="text-button" id="edit-budget-button" type="button"><span aria-hidden="true">⚙</span> Oylik budjetni belgilash</button>
       </section>
 
       <section class="summary-grid" aria-label="Balance summary">
         <article class="metric-card balance-card">
-          <div class="metric-heading"><span>Net balance</span><span class="metric-symbol balance-symbol" aria-hidden="true">◈</span></div>
-          <p class="metric-value" id="net-balance">0 so'm</p>
-          <p class="metric-caption">Income minus expenses</p>
+          <div class="metric-heading"><span>Umumiy balans</span><span class="metric-symbol balance-symbol" aria-hidden="true">◈</span></div>
+          <p class="metric-value" id="net-balance">0 so‘m</p>
+          <p class="metric-caption">Daromad va xarajatlar farqi</p>
           <span class="balance-orbit orbit-one" aria-hidden="true"></span><span class="balance-orbit orbit-two" aria-hidden="true"></span>
         </article>
         <article class="metric-card">
-          <div class="metric-heading"><span>Total income</span><span class="metric-symbol income-symbol" aria-hidden="true">↗</span></div>
-          <p class="metric-value" id="total-income">0 so'm</p>
-          <p class="metric-caption">Across all transactions</p>
+          <div class="metric-heading"><span>Jami daromad</span><span class="metric-symbol income-symbol" aria-hidden="true">↗</span></div>
+          <p class="metric-value" id="total-income">0 so‘m</p>
+          <p class="metric-caption">Barcha operatsiyalar bo‘yicha</p>
         </article>
         <article class="metric-card">
-          <div class="metric-heading"><span>Total expenses</span><span class="metric-symbol expense-symbol" aria-hidden="true">↘</span></div>
-          <p class="metric-value" id="total-expenses">0 so'm</p>
-          <p class="metric-caption">Across all transactions</p>
+          <div class="metric-heading"><span>Jami xarajat</span><span class="metric-symbol expense-symbol" aria-hidden="true">↘</span></div>
+          <p class="metric-value" id="total-expenses">0 so‘m</p>
+          <p class="metric-caption">Barcha operatsiyalar bo‘yicha</p>
         </article>
       </section>
 
       <section class="overview-grid">
         <article class="panel budget-panel" aria-labelledby="budget-title">
-          <div class="panel-heading"><div><span class="section-kicker">MONTHLY PLAN</span><h2 id="budget-title">Spending budget</h2></div><span class="budget-month" id="budget-month"></span></div>
-          <div class="budget-numbers"><strong id="budget-spent">0 so'm</strong><span>of <span id="budget-limit">5 000 000 so'm</span></span></div>
-          <div class="progress-track" id="budget-progress-track" role="progressbar" aria-label="Monthly budget used" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="progress-fill" id="budget-progress-fill"></span></div>
-          <div class="budget-foot"><span id="budget-status">Budget available</span><strong id="budget-percent">0%</strong></div>
+          <div class="panel-heading"><div><span class="section-kicker">OYLIK REJA</span><h2 id="budget-title">Xarajatlar budjeti</h2></div><span class="budget-month" id="budget-month"></span></div>
+          <div class="budget-numbers"><strong id="budget-spent">0 so‘m</strong><span>/ <span id="budget-limit">5 000 000 so‘m</span></span></div>
+          <div class="progress-track" id="budget-progress-track" role="progressbar" aria-label="Oylik budjet sarfi" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="progress-fill" id="budget-progress-fill"></span></div>
+          <div class="budget-foot"><span id="budget-status">Budjet yetarli</span><strong id="budget-percent">0%</strong></div>
         </article>
         <article class="panel recurring-summary" id="recurring">
-          <div class="panel-heading"><div><span class="section-kicker">COMMITMENTS</span><h2>Recurring bills</h2></div><span class="recurring-icon" aria-hidden="true">↻</span></div>
+          <div class="panel-heading"><div><span class="section-kicker">MAJBURIY TO‘LOVLAR</span><h2>Oylik to‘lovlar</h2></div><span class="recurring-icon" aria-hidden="true">↻</span></div>
           <div class="recurring-total" id="recurring-total">0 so'm</div>
-          <p class="panel-muted">Expected monthly liabilities</p>
-          <a class="panel-link" href="#recurring-list">View recurring bills <span aria-hidden="true">→</span></a>
+          <p class="panel-muted">Har oy takrorlanadigan to‘lovlar</p>
+          <a class="panel-link" href="#recurring-list">To‘lovlarni ko‘rish <span aria-hidden="true">→</span></a>
         </article>
       </section>
 
       <section class="analytics-grid" id="analytics" aria-label="Financial analytics">
         <article class="panel chart-panel">
-          <div class="panel-heading"><div><span class="section-kicker">CASH FLOW</span><h2>Income vs expenses</h2></div><span class="chart-period">All time</span></div>
-          <div class="donut-layout"><div class="chart-wrap donut-wrap"><canvas id="cashflow-chart" aria-label="Income compared with expenses" role="img"></canvas><div class="donut-center"><span>NET BALANCE</span><strong id="chart-net-balance">0 so'm</strong></div></div><div class="chart-legend" id="cashflow-legend"></div></div>
+          <div class="panel-heading"><div><span class="section-kicker">PUL OQIMI</span><h2>Daromad va xarajat</h2></div><span class="chart-period">Jami</span></div>
+          <div class="donut-layout"><div class="chart-wrap donut-wrap"><canvas id="cashflow-chart" aria-label="Daromad va xarajatlar taqqoslanishi" role="img"></canvas><div class="donut-center"><span>BALANS</span><strong id="chart-net-balance">0 so‘m</strong></div></div><div class="chart-legend" id="cashflow-legend"></div></div>
         </article>
         <article class="panel chart-panel category-chart-panel">
-          <div class="panel-heading"><div><span class="section-kicker">SPENDING BREAKDOWN</span><h2>By category</h2></div><span class="chart-period">All time</span></div>
-          <div class="chart-wrap bar-wrap"><canvas id="category-chart" aria-label="Expenses broken down by category" role="img"></canvas><div class="chart-empty" id="category-chart-empty">Add expenses to see your breakdown</div></div>
+          <div class="panel-heading"><div><span class="section-kicker">XARAJATLAR TAQSIMOTI</span><h2>Kategoriyalar bo‘yicha</h2></div><span class="chart-period">Jami</span></div>
+          <div class="chart-wrap bar-wrap"><canvas id="category-chart" aria-label="Kategoriyalar bo‘yicha xarajatlar" role="img"></canvas><div class="chart-empty" id="category-chart-empty">Taqsimotni ko‘rish uchun xarajat qo‘shing</div></div>
         </article>
       </section>
 
       <section class="panel transaction-panel" id="transactions">
-        <div class="panel-heading transaction-heading"><div><span class="section-kicker">YOUR ACTIVITY</span><h2>Transactions</h2></div><span class="transaction-count" id="transaction-count">0 records</span></div>
+        <div class="panel-heading transaction-heading"><div><span class="section-kicker">FAOLIYATINGIZ</span><h2>Operatsiyalar</h2></div><span class="transaction-count" id="transaction-count">0 ta yozuv</span></div>
         <div class="filters" role="search">
-          <label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Search transactions</span><input id="search-input" type="search" placeholder="Search transactions" autocomplete="off"></label>
-          <label class="select-field"><span class="sr-only">Filter by type</span><select id="type-filter"><option value="all">All types</option><option value="income">Income</option><option value="expense">Expenses</option></select></label>
-          <label class="select-field"><span class="sr-only">Filter by category</span><select id="category-filter"><option value="all">All categories</option></select></label>
-          <label class="select-field sort-select"><span class="sr-only">Sort transactions</span><select id="sort-select"><option value="date-desc">Newest first</option><option value="date-asc">Oldest first</option><option value="amount-desc">Amount: high to low</option><option value="amount-asc">Amount: low to high</option></select></label>
+          <label class="search-field"><span class="search-icon" aria-hidden="true">⌕</span><span class="sr-only">Operatsiyalarni qidirish</span><input id="search-input" type="search" placeholder="Operatsiyalarni qidirish" autocomplete="off"></label>
+          <label class="select-field"><span class="sr-only">Turi bo‘yicha saralash</span><select id="type-filter"><option value="all">Barcha turlar</option><option value="income">Daromad</option><option value="expense">Xarajat</option></select></label>
+          <label class="select-field"><span class="sr-only">Kategoriya bo‘yicha saralash</span><select id="category-filter"><option value="all">Barcha kategoriyalar</option></select></label>
+          <label class="select-field sort-select"><span class="sr-only">Operatsiyalar tartibi</span><select id="sort-select"><option value="date-desc">Avval yangilari</option><option value="date-asc">Avval eskilari</option><option value="amount-desc">Summa: kattadan kichikka</option><option value="amount-asc">Summa: kichikdan kattaga</option></select></label>
         </div>
         <div class="transaction-table-wrap">
-          <table class="transaction-table"><thead><tr><th scope="col">TRANSACTION</th><th scope="col">CATEGORY</th><th scope="col">DATE</th><th scope="col">AMOUNT</th><th scope="col"><span class="sr-only">Actions</span></th></tr></thead><tbody id="transaction-list"></tbody></table>
-          <div class="empty-state" id="empty-state"><span class="empty-icon" aria-hidden="true">↗</span><strong id="empty-title">A clearer picture starts here</strong><p id="empty-message">Add your first transaction to see your financial activity.</p><button class="button button-primary button-small" id="empty-add-button" type="button">＋ Add transaction</button></div>
+          <table class="transaction-table"><thead><tr><th scope="col">OPERATSIYA</th><th scope="col">KATEGORIYA</th><th scope="col">SANA</th><th scope="col">SUMMA</th><th scope="col"><span class="sr-only">Amallar</span></th></tr></thead><tbody id="transaction-list"></tbody></table>
+          <div class="empty-state" id="empty-state"><span class="empty-icon" aria-hidden="true">↗</span><strong id="empty-title">Moliyaviy hisobni bugun boshlang</strong><p id="empty-message">Faoliyatingizni ko‘rish uchun ilk operatsiyani qo‘shing.</p><button class="button button-primary button-small" id="empty-add-button" type="button">＋ Operatsiya qo‘shish</button></div>
         </div>
       </section>
 
       <section class="panel recurring-list-panel" id="recurring-list">
-        <div class="panel-heading"><div><span class="section-kicker">AUTOMATIC REMINDERS</span><h2>Monthly commitments</h2></div><span class="transaction-count" id="recurring-count">0 bills</span></div>
-        <div class="recurring-list" id="recurring-list-content"><div class="recurring-empty">Recurring expenses you mark will appear here.</div></div>
+        <div class="panel-heading"><div><span class="section-kicker">ESLATMALAR</span><h2>Oylik majburiyatlar</h2></div><span class="transaction-count" id="recurring-count">0 ta to‘lov</span></div>
+        <div class="recurring-list" id="recurring-list-content"><div class="recurring-empty">Takroriy deb belgilangan xarajatlar shu yerda ko‘rinadi.</div></div>
       </section>
-      <footer class="app-footer"><span>© <span id="footer-year"></span> Sarmoya · Stored locally on this device</span><button class="footer-clear-button" id="clear-data-button" type="button">Clear all data</button></footer>
+      <footer class="app-footer"><span>© <span id="footer-year"></span> Sarmoya · Ma’lumotlar shu qurilmada saqlanadi</span><button class="footer-clear-button" id="clear-data-button" type="button">Barcha ma’lumotni o‘chirish</button></footer>
     </main>
   </div>
 
   <dialog class="dialog" id="transaction-dialog" aria-labelledby="transaction-dialog-title">
     <form id="transaction-form" novalidate>
-      <div class="dialog-heading"><div><span class="section-kicker">TRANSACTION DETAILS</span><h2 id="transaction-dialog-title">Add transaction</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="transaction-dialog" aria-label="Close dialog">×</button></div>
+      <div class="dialog-heading"><div><span class="section-kicker">OPERATSIYA MA’LUMOTLARI</span><h2 id="transaction-dialog-title">Operatsiya qo‘shish</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="transaction-dialog" aria-label="Oynani yopish">×</button></div>
       <input id="transaction-id" type="hidden">
-      <fieldset class="type-toggle"><legend>Type</legend><label><input type="radio" name="type" value="expense" checked><span>Expense</span></label><label><input type="radio" name="type" value="income"><span>Income</span></label></fieldset>
-      <label class="form-field" for="amount-input">Amount <span class="field-required">*</span><div class="amount-input-wrap"><input id="amount-input" name="amount" type="number" inputmode="decimal" min="1" step="any" placeholder="0" required><span>so'm</span></div></label>
-      <div class="form-row"><label class="form-field" for="category-input">Category <span class="field-required">*</span><select id="category-input" name="category" required></select></label><label class="form-field" for="date-input">Date <span class="field-required">*</span><input id="date-input" name="date" type="date" required></label></div>
-      <label class="form-field" for="notes-input">Note <span class="optional-label">OPTIONAL</span><input id="notes-input" name="notes" type="text" maxlength="120" placeholder="What was this for?"></label>
-      <label class="recurring-check" id="recurring-check-row"><input id="recurring-input" name="recurring" type="checkbox"><span class="custom-checkbox" aria-hidden="true">✓</span><span><strong>Repeat monthly</strong><small>Include in recurring bills</small></span></label>
+      <fieldset class="type-toggle"><legend>Turi</legend><label><input type="radio" name="type" value="expense" checked><span>Xarajat</span></label><label><input type="radio" name="type" value="income"><span>Daromad</span></label></fieldset>
+      <label class="form-field" for="amount-input">Summa <span class="field-required">*</span><div class="amount-input-wrap"><input id="amount-input" name="amount" type="number" inputmode="decimal" min="1" step="any" placeholder="0" required><span>so‘m</span></div></label>
+      <div class="form-row"><label class="form-field" for="category-input">Kategoriya <span class="field-required">*</span><select id="category-input" name="category" required></select></label><label class="form-field" for="date-input">Sana <span class="field-required">*</span><input id="date-input" name="date" type="date" required></label></div>
+      <label class="form-field" for="notes-input">Izoh <span class="optional-label">IXTIYORIY</span><input id="notes-input" name="notes" type="text" maxlength="120" placeholder="Nima uchun sarflandi?"></label>
+      <label class="recurring-check" id="recurring-check-row"><input id="recurring-input" name="recurring" type="checkbox"><span class="custom-checkbox" aria-hidden="true">✓</span><span><strong>Har oy takrorlansin</strong><small>Oylik to‘lovlarga qo‘shiladi</small></span></label>
       <p class="form-error" id="transaction-error" role="alert"></p>
-      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="transaction-dialog">Cancel</button><button class="button button-primary" type="submit" id="save-transaction-button">Save transaction</button></div>
+      <div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="transaction-dialog">Bekor qilish</button><button class="button button-primary" type="submit" id="save-transaction-button">Saqlash</button></div>
     </form>
   </dialog>
 
   <dialog class="dialog compact-dialog" id="budget-dialog" aria-labelledby="budget-dialog-title">
-    <form id="budget-form" novalidate><div class="dialog-heading"><div><span class="section-kicker">MONTHLY PLAN</span><h2 id="budget-dialog-title">Set your budget</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="budget-dialog" aria-label="Close dialog">×</button></div>
-      <p class="dialog-description">Choose a monthly spending limit in so'm.</p><label class="form-field" for="budget-input">Monthly limit <span class="field-required">*</span><div class="amount-input-wrap"><input id="budget-input" type="number" min="1" step="any" required><span>so'm</span></div></label><p class="form-error" id="budget-error" role="alert"></p><div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="budget-dialog">Cancel</button><button class="button button-primary" type="submit">Save budget</button></div>
+    <form id="budget-form" novalidate><div class="dialog-heading"><div><span class="section-kicker">OYLIK REJA</span><h2 id="budget-dialog-title">Budjetni belgilash</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="budget-dialog" aria-label="Oynani yopish">×</button></div>
+      <p class="dialog-description">Oylik xarajatlar chegarasini so‘mda kiriting.</p><label class="form-field" for="budget-input">Oylik limit <span class="field-required">*</span><div class="amount-input-wrap"><input id="budget-input" type="number" min="1" step="any" required><span>so‘m</span></div></label><p class="form-error" id="budget-error" role="alert"></p><div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="budget-dialog">Bekor qilish</button><button class="button button-primary" type="submit">Saqlash</button></div>
     </form>
   </dialog>
 
   <dialog class="dialog compact-dialog" id="confirm-dialog" aria-labelledby="confirm-title">
-    <div class="dialog-heading"><div><span class="section-kicker">PLEASE CONFIRM</span><h2 id="confirm-title">Clear all data?</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="confirm-dialog" aria-label="Close dialog">×</button></div>
-    <p class="dialog-description" id="confirm-message">This will permanently remove all transactions and reset your budget on this device.</p><div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="confirm-dialog">Keep my data</button><button class="button button-danger" type="button" id="confirm-clear-button">Clear all data</button></div>
+    <div class="dialog-heading"><div><span class="section-kicker">TASDIQLASH</span><h2 id="confirm-title">Barcha ma’lumotlar o‘chirilsinmi?</h2></div><button class="icon-button dialog-close" type="button" data-close-dialog="confirm-dialog" aria-label="Oynani yopish">×</button></div>
+    <p class="dialog-description" id="confirm-message">Barcha operatsiyalar o‘chadi va budjet boshlang‘ich holatga qaytadi.</p><div class="dialog-actions"><button class="button button-quiet" type="button" data-close-dialog="confirm-dialog">Ma’lumotlarni saqlash</button><button class="button button-danger" type="button" id="confirm-clear-button">Hammasini o‘chirish</button></div>
   </dialog>
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
